@@ -3,7 +3,7 @@
 
 
 //CLASS -> COMPANY
-company = class {
+Company = class {
     constructor(name, service, city) {
         console.log("Hi, I am created, my name is", name)
         this.name = name
@@ -20,13 +20,13 @@ company = class {
 
 
 //CLASS -> CUSTOM
-customer = class {
+Customer = class {
     constructor (name, interest, city) {
         console.log("Hi, I am created, my name is", name)
         this.name = name
         this.interest = interest
         this.city = city
-        this.product = []
+        this.products = []
         this.company = [] 
     }
 
@@ -36,7 +36,7 @@ customer = class {
 
     purchase(product) {
         this.product.push(product)
-        product.purchase.push(this)
+        products.purchase.push(this)
 
     }
 
@@ -49,7 +49,7 @@ customer = class {
 
 
 //CLASS -> PRODUCT
-product = class {
+Products = class {
     constructor(name, price) {
         this.name = name
         this.price = price
@@ -64,24 +64,24 @@ product = class {
 }
 
 
-printName = customer => console.log(customer.name + " lives in " + customer.city + "for the price of " + product.price)
+printName = customer => console.log(customer.name + " lives in " + customer.city + "for the price of " + Products.price)
 
 
 //PRODUCT
-yoga = new product('Yoga Class', 20)
-food = new product ('Salad', 10)
+yoga = new Products('Yoga Class', 20)
+food = new Products ('Salad', 10)
 
 
 
 //CUSTOMER
-maria = new customer ('Maria', 'Health', 'Berlin')
-frank = new customer ('Frank', 'Food', 'Munich')
+maria = new Customer ('Maria', 'Health', 'Berlin')
+frank = new Customer ('Frank', 'Food', 'Munich')
 
 
 
 //COMPANY
-hellofresh = new company ('HelloFresh', 'healthy food', 'Berlin', 'food')
-yogabarn = new company ('Yoga Barn', 'yoga classes', 'Munich', 'sports')
+hellofresh = new Company ('HelloFresh', 'healthy food', 'Berlin', 'food')
+yogabarn = new Company ('Yoga Barn', 'yoga classes', 'Munich', 'sports')
 
 
 maria.purchase(yoga)
