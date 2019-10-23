@@ -1,6 +1,4 @@
-// Project - Happy COMPANY
 // I would like to create a database, where HR-people can look for services that improve the satisfaction of employees ( like yoga, massage, fresh fruits).
-
 
 
 //CLASS -> COMPANY
@@ -18,7 +16,6 @@ Company = class {
     }
 
 }
-
 
 //CLASS -> CUSTOM
 Customer = class {
